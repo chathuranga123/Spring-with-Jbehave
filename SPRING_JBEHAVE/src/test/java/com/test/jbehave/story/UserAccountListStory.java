@@ -17,9 +17,4 @@ public class UserAccountListStory extends JUnitStory{
 	public InjectableStepsFactory stepsFactory() {
 		return new InstanceStepsFactory(configuration(),new UserAccountListSteps());
 	}
- 
-	/*@Override
-	protected List<String> storyPaths() {
-		return Arrays.asList("com/test/jbehave/story/user_account_list_story.story");
-	}*/
 }
