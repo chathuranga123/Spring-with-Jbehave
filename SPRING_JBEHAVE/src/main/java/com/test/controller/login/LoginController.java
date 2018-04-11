@@ -14,6 +14,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.test.bean.login.LoginInputBean;
+import com.test.bean.session.SessionBean;
+import com.test.service.home.HomeService;
 import com.test.service.login.LoginService;
 
 @Controller
@@ -22,7 +24,13 @@ public class LoginController {
 	private final Log logger = LogFactory.getLog(getClass());
 	
 	@Autowired
+	SessionBean sessionBean;
+	
+	@Autowired
 	LoginService loginService;
+	
+	@Autowired
+	HomeService homeService;
 	
 	@RequestMapping(value="/login",method=RequestMethod.GET)
 	public ModelAndView getLogin(HttpServletRequest request,HttpServletResponse response){
@@ -40,6 +48,8 @@ public class LoginController {
 			String password = loginInputBean.getPassword();
 			
 			if(loginService.checkValidUser(userName, password)){
+				sessionBean.setUserId("1");
+				homeService.getUserAccounts();
 				modelandview = new ModelAndView("home");
 			}
 		}catch(Exception e){

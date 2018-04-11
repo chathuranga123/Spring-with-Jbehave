@@ -11,4 +11,11 @@ public class Common {
 			return false;
 		}
 	}
+	
+	public String replaceNullAndEmpty(Object value){
+		if(value == null || value.equals("")){
+			value="--";
+		}
+		return value.toString();
+	}
 }

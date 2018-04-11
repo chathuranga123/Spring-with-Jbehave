@@ -4,5 +4,5 @@ import java.util.List;
 import com.test.mapping.useraccount.UserAccount;
 
 public interface HomeDao {
-	public List<UserAccount> getUserAccountList(String customerCIF)throws Exception; 
+	public List<UserAccount> getUserAccountList(String userId)throws Exception; 
 }

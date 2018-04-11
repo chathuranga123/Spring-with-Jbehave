@@ -3,70 +3,82 @@ package com.test.mapping.useraccount;
 import java.math.BigDecimal;
 
 public class UserAccount {
+	
 	private String cif;
+	private String userId;
 	private String accountNumber;
+	private String accountType;
 	private String accountHolderName;
+	private String bank;
 	private String branch;
+	private String status;
 	private BigDecimal accountBalance;
 	
-	/**
-	 * @return the cif
-	 */
 	public String getCif() {
 		return cif;
 	}
-	/**
-	 * @param cif the cif to set
-	 */
 	public void setCif(String cif) {
 		this.cif = cif;
 	}
-	/**
-	 * @return the accountNumber
-	 */
+	
+	public String getUserId() {
+		return userId;
+	}
+	public void setUserId(String userId) {
+		this.userId = userId;
+	}
+	
 	public String getAccountNumber() {
 		return accountNumber;
 	}
-	/**
-	 * @param accountNumber the accountNumber to set
-	 */
 	public void setAccountNumber(String accountNumber) {
 		this.accountNumber = accountNumber;
 	}
-	/**
-	 * @return the accountHolderName
-	 */
+	
+	public String getAccountType() {
+		return accountType;
+	}
+	public void setAccountType(String accountType) {
+		this.accountType = accountType;
+	}
+	
 	public String getAccountHolderName() {
 		return accountHolderName;
 	}
-	/**
-	 * @param accountHolderName the accountHolderName to set
-	 */
 	public void setAccountHolderName(String accountHolderName) {
 		this.accountHolderName = accountHolderName;
 	}
-	/**
-	 * @return the branch
-	 */
+	
+	public String getBank() {
+		return bank;
+	}
+	public void setBank(String bank) {
+		this.bank = bank;
+	}
+	
 	public String getBranch() {
 		return branch;
 	}
-	/**
-	 * @param branch the branch to set
-	 */
 	public void setBranch(String branch) {
 		this.branch = branch;
 	}
-	/**
-	 * @return the accountBalance
-	 */
+	
+	public String getStatus() {
+		return status;
+	}
+	public void setStatus(String status) {
+		this.status = status;
+	}
+	
 	public BigDecimal getAccountBalance() {
 		return accountBalance;
 	}
-	/**
-	 * @param accountBalance the accountBalance to set
-	 */
 	public void setAccountBalance(BigDecimal accountBalance) {
 		this.accountBalance = accountBalance;
+	}
+	
+	@Override
+	public String toString() {
+		return "-->"+userId + "|" + accountNumber + "|" + accountType + "|" + accountHolderName + "|" + bank + "|" + branch + "|" +status + "|" +accountBalance;
 	}
 }
