@@ -20,10 +20,10 @@
 		  <h2>Login Form</h2>
 		</div>
 		<form:form id="loginForm" class="w3-container" method="post" action="login.htm" modelAttribute="loginInputBean">
-			<form:label path="userName">Enter your user-name</form:label>
+			<form:label path="userName">User Name</form:label>
 			<form:input class="w3-input"  id="userName" name="userName" path="userName" /><br>
 			
-			<form:label path="password">Please enter your password</form:label>
+			<form:label path="password">Password</form:label>
 			<form:password class="w3-input"  id="password" name="password" path="password" /><br>
 			
 			<input class="w3-button w3-black" type="submit" value="Submit" />

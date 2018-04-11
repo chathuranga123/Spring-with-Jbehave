@@ -1,7 +1,10 @@
 package com.test.controller.login;
 
+import java.util.List;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.swing.text.TableView;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -15,6 +18,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.test.bean.login.LoginInputBean;
 import com.test.bean.session.SessionBean;
+import com.test.mapping.useraccount.UserAccount;
 import com.test.service.home.HomeService;
 import com.test.service.login.LoginService;
 
@@ -49,9 +53,8 @@ public class LoginController {
 			
 			if(loginService.checkValidUser(userName, password)){
 				sessionBean.setUserId("1");
-				homeService.getUserAccounts();
-				modelandview = new ModelAndView("home");
-			}
+				List<UserAccount> list= homeService.getUserAccounts();
+				modelandview = new ModelAndView("home","list",list);}
 		}catch(Exception e){
 			logger.info("Exception :"+e);
 		}
