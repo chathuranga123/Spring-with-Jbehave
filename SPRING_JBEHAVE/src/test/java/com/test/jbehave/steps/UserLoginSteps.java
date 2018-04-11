@@ -2,21 +2,12 @@ package com.test.jbehave.steps;
 
 import org.jbehave.core.annotations.BeforeScenario;
 import org.jbehave.core.annotations.Given;
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
-import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
-import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
-
 import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.*;
-
-
 import com.test.dao.login.LoginDao;
 import com.test.mapping.user.User;
 import com.test.service.login.LoginService;
@@ -37,7 +28,6 @@ public class UserLoginSteps {
 	public void initMocks() {
 	    MockitoAnnotations.initMocks(this);
 	}
-	
 	
 	@Given("$username username and $password password")
 	@Test
