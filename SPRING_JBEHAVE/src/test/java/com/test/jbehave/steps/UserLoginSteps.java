@@ -3,11 +3,9 @@ package com.test.jbehave.steps;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.jbehave.core.annotations.Given;
-import org.jbehave.core.annotations.Named;
 import org.jbehave.core.annotations.Then;
 
 import com.test.service.login.LoginService;
-
 
 @Component
 public class UserLoginSteps {
