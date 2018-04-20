@@ -11,11 +11,6 @@ public class LoginDaoImpl implements LoginDao{
 	
 	public User getUser(String username, String password) throws Exception {
 		User user=new User();
-		try{
-	
-		}catch(Exception e){
-			
-		}
 		return user;
 	}
 }
